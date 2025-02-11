@@ -3,118 +3,338 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A simple webpage example">
-  <title>My Simple Website</title>
+  <title>Brews & Bites Cafe</title>
   <style>
+    /* Global Styles */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background:  whi;
+      color: black;
     }
 
+    /* Header and Navigation */
     header {
-      background-color: #4CAF50;
-      color: white;
+      background: lightblue; /* Coffee brown */
+      color: black(185, 239, 231);
+      padding: 20px;
       text-align: center;
-      padding: 10px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
     }
 
     nav {
-      background-color: #333;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
     }
 
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      text-align: center;
-    }
-
-    nav ul li {
-      display: inline;
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      color: white;
+    nav a {
+      color:black;
       text-decoration: none;
-      font-weight: bold;
-      padding: 10px;
-      display: inline-block;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
     }
 
-    nav ul li a:hover {
-      background-color: #575757;
+    nav a:hover {
+      color: black; /* Light brown */
     }
 
-    main {
+    /* Product Grid */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       padding: 20px;
     }
 
-    section {
+    .box {
+      background:lightcyan(226, 213, 221);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px grey(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: calc(33.33% - 20px); /* 3 columns with spacing */
       margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    .box {
+  background: grey(226, 213, 221);
+  border: 3px solid lightcyan; /* Light brown border */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(33.33% - 20px); /* 3 columns with spacing */
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+.box-text {
+  font-family: 'Avenir', serif; /* Add this line */
+  width: 55%;
+}
+
+
+    .box:hover {
+      transform: translateY(-5px);
     }
 
-    footer {
-      background-color: #333;
-      color: white;
+    .box img {
+      width: 90%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .product {
+      padding: 15px;
       text-align: center;
-      padding: 10px 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+    }
+
+    .product h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .product p {
+      margin: 10px 0;
+      color: black;
+    }
+
+    .product h3 {
+      margin: 10px 0;
+      color: black/* Coffee brown */
+    }
+
+    .product button {
+      padding: 10px 20px;
+      background: brown; /* Coffee brown */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .product button:hover {
+      background: brown; /* Light brown */
+    }
+
+    /* Description Section */
+    .description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: whitesmoke;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.box {
+  background: grey(226, 213, 221);
+  border: 3px solid grey;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+
+
+.description-image {
+  width: 40%;
+  margin-right: 20px;
+}
+/* Border for the entire description section */
+.description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: whitesmoke;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 3px solid #d4a56f; /* Outer border */
+}
+
+
+
+.description-image img {
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.description-text {
+  width: 55%;
+}
+.description-box {
+  background: rgb(226, 213, 221);
+  border: 3px solid #d4a56f; /* Light brown border */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(33.33% - 20px); /* 3 columns with spacing */
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+
+
+
+    .description h2 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+      color: black; /* Coffee brown */
+    }
+
+    .description img {
+      width: 95%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .description p {
+      margin: 0;
+      color: #666;
+      line-height: 1.6;
+    }
+    .description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: whitesmoke;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 3px solid grey; /* Light brown border for description box */
+}
+
+    .description button {
+      padding: 10px 20px;
+      background: brown; /* Coffee brown */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 15px;
+    }
+    .description-text {
+  font-family: 'Avenir', serif; /* Add this line */
+  width: 55%;
+}
+
+    
+
+
+    .description button:hover {
+      background: white; /* Light brown */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .box {
+        width: calc(50% - 20px); /* 2 columns on smaller screens */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .box {
+        width: 100%; /* 1 column on mobile */
+      }
     }
   </style>
 </head>
 <body>
-
-  <!-- Header Section -->
+  <!-- Header -->
   <header>
-    <h1>Welcome to My Simple Website</h1>
+    <h1>Brews & Bites Cafe</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Service</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
   </header>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Product Grid -->
+  <div class="row">
+    <!-- Frappé Coffee -->
+    <div class="box">
+      <img src="https://files.oaiusercontent.com/file-Jb4ADdUfo3N8NK4zFpXKUC?se=2025-02-08T17%3A06%3A01Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Da7f74109-cb03-416c-b79b-8616b47d7e28.webp&sig=uR2A4mxI7OD%2B7Gd9PbCO4lqUWG5oFyzD2dKTYaB65KY%3D" />
+      <div class="product">
+        <h2>Truffle-Kissed Scallops</h2>
+        <p>"Seared perfection, kissed by truffle magic ✨🍽️"</p>
+        <h3>Rs 580</h3>
+        <button>Add to Cart</button>
+      </div>
+    </div>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Home Section -->
-    <section id="home">
-      <h2>Home</h2>
-      <p>Welcome to the homepage of my simple website. Here you'll find all the information you need!</p>
-    </section>
+    <!-- Coffee -->
+    <div class="box">
+      <img src="https://www.chefadora.com/_next/image?url=https%3A%2F%2Fchefadora.b-cdn.net%2Fmedium_931_DFCAA_1_C48_4496_B851_1_AD_52_DC_74233_4597b7d9e8.jpeg&w=3840&q=75" alt="Coffee" />
+      <div class="product">
+        <h2>Momo Majesty</h2>
+        <p>"Steamed royalty wrapped in every bite 👑🥟"</p>
+        <h3>Rs 360</h3>
+        <button>Add to Cart</button>
+      </div>
+    </div>
 
-    <!-- About Section -->
-    <section id="about">
-      <h2>About</h2>
-      <p>This is a basic example of a webpage structure, created to help beginners learn HTML and CSS.</p>
-    </section>
+    <!-- Sandwich -->
+    <div class="box">
+      <img src="https://files.oaiusercontent.com/file-6uAP2uxoqPCm3CqdamBPEb?se=2025-02-08T16%3A23%3A25Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D94411bf7-216c-4639-b706-789a8205558f.webp&sig=G%2BJ2g7DBsxbVW/v9ax%2BWsVpiR/uy5OHbZc3Z6FB%2BkTE%3D" alt="Sandwich" />
+      <div class="product">
+        <h2>Caffeine Bloom</h2>
+        <p>"A fragrant bloom of caffeine bliss ☕🌸"</p>
+        <h3>Rs 375</h3>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </div>
 
-    <!-- Services Section -->
-    <section id="services">
-      <h2>Services</h2>
-      <p>We offer various web development services, including HTML, CSS, JavaScript, and more.</p>
-    </section>
+  <!-- Description Section: India Estates Blend -->
+  <div class="description">
+    <div class="description-image">
+      <img src="https://files.oaiusercontent.com/file-9y7eFyBxCDRvthjWASnTLC?se=2025-02-08T16%3A37%3A20Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Db03409ad-6925-4a64-b849-3f4de9f11a2c.webp&sig=/fze7j/lnEn2a%2BJgKwQHBnUfsHznF/aNCOZXGz5giSE%3D" alt="India Estates Blend" />
+    </div>
+    <div class="description-text">
+      <h2>Dark Bliss Bite</h2>
+      <p> ""Step into a world of indulgence with Dark Bliss Bite — bold, velvety, and crafted for true chocolate lovers. Rich cocoa notes blend seamlessly with a silky smooth texture.Indulge in the bold allure of dark chocolate — a symphony of flavor and texture. Silky smooth, perfectly balanced, and crafted for moments of pure bliss. One bite, and you're lost in a world of decadent temptation Every bite offers a moment of pure decadence, leaving your taste buds craving more. Savor the irresistible magic of dark chocolate delight 🍫✨." </p>
+      <h3>Rs 180</h3>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  
+  <!-- Description Section: Dark Chocolate -->
+  <div class="description reverse">
+    <div class="description-text">
+      <h2>ChocoLuxe Bliss</h2>
+      <p> "Dark Bliss Bite — where indulgence meets sophistication. Rich, bold dark chocolate crafted to perfection, melting smoothly with every bite. The velvety texture dances on your taste buds, leaving a lingering note of pure decadence. A treat designed for those who crave the extraordinary. Savor each moment, embrace every sensation. It's not just a bite; it's a blissful escape 🍫✨." </p>
+      <h3>Rs 200</h3>
+      <button>Add to Cart</button>
+    </div>
+  <div class="description-image">
+    <img src="https://files.oaiusercontent.com/file-NV9sGLQXcJmRksJGD5VyR4?se=2025-02-08T17%3A02%3A50Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D74aef43d-b212-4619-bb75-99ae75650904.webp&sig=%2BuvtXZs02ZfSyZ172JIUIe2k/9tga3okeHmjOP3w2Qw%3D" alt="Dark Chocolate" />
+  </div>
+</div>
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>If you want to get in touch, please feel free to <a href="mailto:contact@example.com">email us</a>.</p>
-    </section>
-  </main>
-
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2024 My Simple Website</p>
-  </footer>
-
+  
+  </div>
+  </div>
 </body>
 </html>
